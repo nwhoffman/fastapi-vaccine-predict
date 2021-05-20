@@ -10,8 +10,8 @@ app = FastAPI()
 
 # Implement index route
 @app.get("/")
-def index():
-    return {"message": "Welcome to the vaccine predictor!"}
+async def index():
+    return {"Message": "Welcome to the vaccine predictor!"}
 
 class VaccineName(BaseModel):
     age_yrs: float
@@ -21,8 +21,8 @@ class VaccineName(BaseModel):
     symptom2_code: int
     symptom_num: int
 
-@app.post('/predict')
-def predict_vaccine(symptoms: VaccineName):
+@app.post("/predict")
+async def predict_vaccine(symptoms: VaccineName):
     data = symptoms.dict()
     loaded_model = load('app/trained_model.joblib')
     data_in = [data['age_yrs'], data['sex'], data['num_days'], data['symptom1_code'], data['symptom2_code'], data['symptom_num']]
