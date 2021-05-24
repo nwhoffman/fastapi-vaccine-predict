@@ -4,7 +4,7 @@ A demonstration using FastAPI to deploy a simple machine learning model. A train
 
 ## Can symptoms predict the vaccine?
 
-Using data from the VAERS website, we created a classifier model to predict the vaccine that was administered, based on 
+Using data from the VAERS website, we created a classifier model to predict the vaccine that was administered, based on age, sex, symptom timing, and symptoms.
 
 ### Data
 
