@@ -32,6 +32,32 @@ Where
 * `symptom1_code` and `symptom2_code` are found in the table below
 * `symptom_num` is an integer between 1-5 (the total number of symptoms experienced)
 
+---
+
+**Example** (Moderna is the actual vaccine)
+
+Input:
+```
+{
+  "age_yrs": 43,
+  "sex": 0,
+  "num_days": 7,
+  "symptom1_code": 128,
+  "symptom2_code": 113,
+  "symptom_num": 1
+}
+```
+
+Output:
+```
+{
+  "probability (J&J)": 0.04567454336684485,
+  "probability (Moderna)": 0.8553135214748054,
+  "probability (Pfizer)": 0.09901193515835006
+}
+```
+---
+
 #### Docker
 
 You can try out the application in a Docker container:
